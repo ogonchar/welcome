@@ -75,7 +75,7 @@ class ListViewItem extends StatelessWidget {
                             const SizedBox(height: 10),
                           ]),
                     ),
-                    const SizedBox(width: 10),
+                    const SizedBox(width: 20),
                     Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
