@@ -7,16 +7,18 @@ import 'package:welcome/feature/main_screen/domain/models/tour_model.dart';
 class TourRepository {
   /// due to test assignment I did not implement caching mechanism,
   /// and giving the randomize nature of the date it's practically makes no sense
-  final List<String> images = [];
-  final List<String> descriptions = [];
+  List<String> images = [];
+  List<String> descriptions = [];
 
   Future<List<TourModel>> getToursByType(TourType type, int page) async {
-    if (images.isEmpty || descriptions.isEmpty) {
-      /// this should be DI but for the sake of the test assignment I will leave it like this
-      final imagesAndDescriptions = await NetworkProvider().getListImages();
-      images.addAll(imagesAndDescriptions.$1);
-      descriptions.addAll(imagesAndDescriptions.$2);
-    }
+    /// this has to be cached, but for the sake of imitation of network latency I will leave it like this
+    final imagesAndDescriptions =
+
+        /// this should be DI but for the sake of the test assignment I will leave it like this
+        await NetworkProvider().getListImages();
+
+    images = imagesAndDescriptions.$1;
+    descriptions = imagesAndDescriptions.$2;
 
     return List.generate(
         10,
