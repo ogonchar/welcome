@@ -79,7 +79,7 @@ class _HorizontalScrollWidgetState extends State<HorizontalScrollWidget>
             effect: const ExpandingDotsEffect(
                 dotHeight: 4,
                 dotWidth: 4,
-                dotColor: WColors.grey,
+                dotColor: Color(0xFFE0E4EE),
                 activeDotColor: WColors.grey),
             onDotClicked: (index) {
               _updateCurrentPageIndex(index);
