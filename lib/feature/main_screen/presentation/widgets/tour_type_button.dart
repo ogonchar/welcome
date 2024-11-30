@@ -31,7 +31,10 @@ class TourTypeIndicator extends StatelessWidget {
           ),
         ),
         child: Text(title,
-            style: TextStyle(color: isSelected ? WColors.grey : Colors.white)),
+            style: TextStyle(
+                fontSize: 11,
+                fontWeight: FontWeight.w600,
+                color: isSelected ? WColors.grey : Colors.white)),
       ),
     );
   }
