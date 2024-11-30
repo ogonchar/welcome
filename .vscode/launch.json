@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "welcome",
+            "request": "launch",
+            "type": "dart",
+            "args": [
+                "--dart-define=UNSPLASH_CLIENT_ID=jmKGgpHFhNcqfTtkNtWsg03q_GWX_FZqmvQfIpQK-rw"
+            ]
+        },
+        {
+            "name": "welcome (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile",
+            "args": [
+                "--dart-define=UNSPLASH_CLIENT_ID=jmKGgpHFhNcqfTtkNtWsg03q_GWX_FZqmvQfIpQK-rw"
+            ]
+        },
+        {
+            "name": "welcome (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release",
+            "args": [
+                "--dart-define=UNSPLASH_CLIENT_ID=jmKGgpHFhNcqfTtkNtWsg03q_GWX_FZqmvQfIpQK-rw"
+            ]
+        }
+    ]
+}
